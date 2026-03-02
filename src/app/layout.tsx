@@ -4,14 +4,18 @@ import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Vishnu Shaji | Full-Stack & AI",
-  description: "B.Tech CS (AI) Student & Full-Stack Developer specializing in React Native and Next.js.",
+  description:
+    "B.Tech CS (AI) Student & Full-Stack Developer specializing in React Native and Next.js.",
+  verification: {
+    google: "E2zCfpYrxeefXcPZzqPDxEK1RQGmLwUlt1gjsFcHniU",
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" className="scroll-smooth">
       <body className="antialiased bg-[var(--color-dark-bg)] text-white">
