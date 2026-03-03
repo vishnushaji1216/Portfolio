@@ -12,7 +12,7 @@ export default function Projects() {
       description: "A modern, high-performance institutional website providing a seamless digital gateway for students and parents.",
       tech: ["React", "Next.js", "Tailwind CSS"],
       link: "https://www.stellamaris-school.org/",
-      image: "/images/stella_web.jpg", 
+      image: "/images/Stella_web.jpg", 
     },
     {
       id: 2,
