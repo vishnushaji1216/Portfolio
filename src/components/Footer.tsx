@@ -44,23 +44,23 @@ export default function Footer() {
           <div className="flex items-center gap-6 text-gray-400 pr-15">
 
             <Link
-              href="https://github.com/YOUR_GITHUB"
+              href="https://github.com/vishnushaji1216"
               target="_blank"
               className="hover:text-[var(--color-neon-cyan)] hover:-translate-y-1 transition-all duration-300"
             >
               <Github size={20} />
             </Link>
 
-            <Link
+            {/* <Link
               href="https://linkedin.com/in/YOUR_LINKEDIN"
               target="_blank"
               className="hover:text-[var(--color-neon-purple)] hover:-translate-y-1 transition-all duration-300"
             >
               <Linkedin size={20} />
-            </Link>
+            </Link> */}
 
             <Link
-              href="mailto:YOUR_EMAIL"
+              href="mailto:vishnu.shaji.1216@gmail.com"
               className="hover:text-[var(--color-neon-cyan)] hover:-translate-y-1 transition-all duration-300"
             >
               <Mail size={20} />
