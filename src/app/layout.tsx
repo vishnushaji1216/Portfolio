@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Vishnu Shaji | Full-Stack & AI",
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className="antialiased bg-[var(--color-dark-bg)] text-white">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
