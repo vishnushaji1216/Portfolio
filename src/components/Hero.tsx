@@ -45,18 +45,11 @@ export default function Hero() {
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
-              CRAFTING <br />
-              <span className="text-[var(--color-neon-cyan)] drop-shadow-[0_0_20px_rgba(0,240,255,0.6)]">
-                DIGITAL
-              </span>{" "}
-              <br />
-              EXPERIENCES
+              I build web apps, mobile apps, and custom dashboards that help businesses grow.
             </h1>
 
             <p className="text-gray-400 text-lg max-w-lg font-mono leading-relaxed">
-              Building cutting-edge web and mobile applications with modern
-              technologies. Transforming ideas into immersive, high-performance
-              solutions.
+              Full-stack developer based in Kerala — I turn business problems into fast, clean digital products.
             </p>
 
             <div className="flex flex-wrap gap-6 pt-2">
@@ -65,16 +58,20 @@ export default function Hero() {
                 href="#projects"
                 className="px-8 py-4 bg-[var(--color-neon-cyan)]/10 border border-[var(--color-neon-cyan)] text-[var(--color-neon-cyan)] font-mono text-sm tracking-widest hover:bg-[var(--color-neon-cyan)] hover:text-black transition-all duration-300 shadow-[0_0_15px_rgba(0,240,255,0.15)] hover:shadow-[0_0_25px_rgba(0,240,255,0.5)]"
               >
-                VIEW PROJECTS
+                See My Work
               </Link>
 
               <Link
                 href="#contact"
                 className="px-8 py-4 border border-white/20 text-white font-mono text-sm tracking-widest hover:border-white/60 hover:bg-white/5 transition-all duration-300"
               >
-                GET IN TOUCH
+                Book a Free Call
               </Link>
 
+            </div>
+
+            <div className="pt-4 font-mono text-[12px] text-[#444444] tracking-[0.15em] uppercase">
+              3 Live Projects · 35+ Screens Built · Kerala & Remote
             </div>
 
           </div>
@@ -98,9 +95,8 @@ export default function Hero() {
                 <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
               </div>
 
-              <pre className="font-mono text-[15px] leading-loose text-gray-300 overflow-x-auto">
+              <pre className="font-mono text-[13px] leading-relaxed text-gray-300 overflow-x-auto">
   <code>
-
     <span className="text-purple-400">const</span>{" "}
     <span className="text-cyan-400">developer</span> = {"{"}
     <br />
@@ -109,32 +105,38 @@ export default function Hero() {
     <span className="text-green-400">"Vishnu Shaji"</span>,
     <br />
 
-    {"  "}skills: [
-    <span className="text-green-400">"React Native"</span>,{" "}
-    <span className="text-green-400">"Node JS"</span>,{" "}
-    <span className="text-green-400">"Python"</span>
+    {"  "}based:{" "}
+    <span className="text-green-400">"Kannur, Kerala"</span>,
+    <br />
+
+    {"  "}services: [
+    <span className="text-green-400">"Web Apps"</span>,{" "}
+    <span className="text-green-400">"Mobile Apps"</span>,{" "}
+    <span className="text-green-400">"E-commerce"</span>
     ],
     <br />
 
-    {"  "}passion:{" "}
-    <span className="text-green-400">"Build creative solutions"</span>,
+    {"  "}clients: [
+    <span className="text-green-400">"Schools"</span>,{" "}
+    <span className="text-green-400">"Startups"</span>,{" "}
+    <span className="text-green-400">"Small Businesses"</span>
+    ],
     <br />
 
     {"  "}
     <span className="text-purple-400">async</span>{" "}
-    <span className="text-cyan-400">build</span>(idea) {"{"}
+    <span className="text-cyan-400">solve</span>(yourProblem) {"{"}
     <br />
 
     {"    "}
     <span className="text-purple-400">return</span>{" "}
     <span className="text-purple-400">await</span>{" "}
-    this.transform(idea);
+    this.build(yourProblem);
     <br />
 
     {"  }"}
     <br />
     {"};"}
-
   </code>
 </pre>
 

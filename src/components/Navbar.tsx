@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { Github, Linkedin } from "lucide-react";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,7 +29,7 @@ export default function Navbar() {
             &lt;DEV/&gt;
           </span>
         </Link>
-        <div className="hidden md:flex space-x-8 text-sm font-mono tracking-[0.2em] text-gray-400">
+        <div className="hidden md:flex items-center space-x-8 text-sm font-mono tracking-[0.2em] text-gray-400">
           {["HOME","STORY", "PROJECTS", "ABOUT", "SKILLS","CONTACT"].map((item) => (
             <Link
               key={item}
@@ -38,6 +39,14 @@ export default function Navbar() {
               {item}
             </Link>
           ))}
+          <div className="flex items-center space-x-5 pl-4 border-l border-white/10">
+            <Link href="https://github.com/vishnushaji1216" target="_blank" className="hover:text-[var(--color-neon-cyan)] hover:scale-110 transition-all duration-200">
+              <Github size={18} />
+            </Link>
+            <Link href="https://www.linkedin.com/in/vishnu-shaji-785279222?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" className="hover:text-[var(--color-neon-cyan)] hover:scale-110 transition-all duration-200">
+              <Linkedin size={18} />
+            </Link>
+          </div>
         </div>
         
       </div>

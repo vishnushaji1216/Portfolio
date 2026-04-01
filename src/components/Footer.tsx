@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Github, Linkedin, Mail, ArrowUp } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowUp, MessageCircle } from "lucide-react";
 
 export default function Footer() {
 
@@ -51,19 +51,27 @@ export default function Footer() {
               <Github size={20} />
             </Link>
 
-            {/* <Link
-              href="https://linkedin.com/in/YOUR_LINKEDIN"
+            <Link
+              href="https://www.linkedin.com/in/vishnu-shaji-785279222?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               target="_blank"
-              className="hover:text-[var(--color-neon-purple)] hover:-translate-y-1 transition-all duration-300"
+              className="hover:text-[var(--color-neon-cyan)] hover:-translate-y-1 transition-all duration-300"
             >
               <Linkedin size={20} />
-            </Link> */}
+            </Link>
 
             <Link
               href="mailto:vishnu.shaji.1216@gmail.com"
               className="hover:text-[var(--color-neon-cyan)] hover:-translate-y-1 transition-all duration-300"
             >
               <Mail size={20} />
+            </Link>
+
+            <Link
+              href="https://wa.me/917907021234"
+              target="_blank"
+              className="hover:text-[var(--color-neon-cyan)] hover:-translate-y-1 transition-all duration-300"
+            >
+              <MessageCircle size={20} />
             </Link>
 
           </div>

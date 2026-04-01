@@ -51,15 +51,19 @@ export default function Contact() {
     <section id="contact" className="py-24 relative border-t border-white/5">
       <div className="max-w-7xl mx-auto px-8 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-20">
         <div>
-          <div className="text-[var(--color-neon-cyan)] font-mono text-sm tracking-widest mb-4 flex items-center">
-            <span className="text-gray-500 mr-2">//</span> GET IN TOUCH
-          </div>
           <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-6">
-            LET'S <span className="text-[var(--color-neon-cyan)] drop-shadow-[0_0_20px_rgba(0,240,255,0.6)]">CONNECT</span>
+            Let's build something together
           </h2>
-          <p className="text-gray-400 font-mono text-sm leading-relaxed max-w-md mb-12">
-            Have a project in mind or just want to chat? Drop me a message and I'll get back to you as soon as possible.
+          <p className="text-gray-400 font-mono text-sm leading-relaxed max-w-md mb-8">
+            Have a project in mind? Fill out the form and I'll get back to you 
+            within 24 hours — or reach out directly on WhatsApp.
           </p>
+
+          <div className="mb-12">
+            <a href="#" className="inline-block px-6 py-4 bg-[var(--color-neon-cyan)] text-black font-mono text-sm font-bold tracking-widest hover:bg-white transition-colors duration-300 w-full md:w-auto text-center">
+              Book a Free Discovery Call →
+            </a>
+          </div>
 
           <div className="space-y-6">
             <div className="flex items-center space-x-6">
@@ -88,8 +92,8 @@ export default function Contact() {
                 <Phone size={20} />
               </div>
               <div>
-                <div className="text-gray-500 font-mono text-xs tracking-widest uppercase mb-1">Phone</div>
-                <div className="text-white font-mono text-sm">+91 7907021204</div>
+                <div className="text-gray-500 font-mono text-xs tracking-widest uppercase mb-1">WhatsApp</div>
+                <a href="https://wa.me/917907021234" target="_blank" rel="noopener noreferrer" className="text-white font-mono text-sm hover:text-[var(--color-neon-cyan)] transition-colors">+91 7907021234</a>
               </div>
             </div>
 
@@ -106,7 +110,7 @@ export default function Contact() {
                 required
                 value={formData.name}
                 onChange={handleChange}
-                placeholder="John Doe"
+                placeholder="Your name"
                 className="bg-transparent border-b border-white/10 py-3 text-white font-mono text-sm focus:outline-none focus:border-[var(--color-neon-cyan)] transition-colors duration-300 placeholder:text-gray-700"
               />
             </div>
@@ -119,7 +123,7 @@ export default function Contact() {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                placeholder="john@example.com"
+                placeholder="your@email.com"
                 className="bg-transparent border-b border-white/10 py-3 text-white font-mono text-sm focus:outline-none focus:border-[var(--color-neon-cyan)] transition-colors duration-300 placeholder:text-gray-700"
               />
             </div>
@@ -131,7 +135,7 @@ export default function Contact() {
                 required
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Tell me about your project..."
+                placeholder="Tell me about your project — what are you trying to build?"
                 className="bg-transparent border-b border-white/10 py-3 text-white font-mono text-sm h-24 resize-none focus:outline-none focus:border-[var(--color-neon-cyan)] transition-colors duration-300 placeholder:text-gray-700"
               ></textarea>
             </div>
@@ -159,7 +163,7 @@ export default function Contact() {
               ) : (
                 <>
                   <Send size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-                  <span>SEND MESSAGE</span>
+                  <span>Send Message →</span>
                 </>
               )}
             </button>

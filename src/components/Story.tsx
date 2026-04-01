@@ -22,8 +22,8 @@ const storySteps: Step[] = [
     subtitle: "From curiosity to code",
     description:
       "Started exploring how apps actually work — from frontend interfaces to backend logic. What began as curiosity quickly turned into building small tools and experimenting with real technologies.",
-    stat: "1000+",
-    statLabel: "Hours Building & Learning",
+    stat: "3",
+    statLabel: "client products shipped",
     color: "text-[var(--color-neon-cyan)] text-glow",
   },
   {
@@ -33,8 +33,8 @@ const storySteps: Step[] = [
     subtitle: "Thinking like a builder",
     description:
       "Shifted focus from learning syntax to solving real problems. Began designing complete products — including a platform connecting schools with teachers and other real-world tools.",
-    stat: "10+",
-    statLabel: "Product Ideas Prototyped",
+    stat: "35",
+    statLabel: "screen app delivered",
     color: "text-[var(--color-neon-purple)] text-glow-purple",
   },
   {
@@ -44,8 +44,8 @@ const storySteps: Step[] = [
     subtitle: "Building faster with new tools",
     description:
       "Started integrating modern development workflows using AI-assisted tools, rapid prototyping, and frameworks like Next.js to build and ship faster.",
-    stat: "Next",
-    statLabel: "Full Product Launch",
+    stat: "Now",
+    statLabel: "Currently building Stella Bridge v2",
     color: "text-[var(--color-neon-cyan)] text-glow",
   },
 ];
@@ -93,14 +93,13 @@ function StoryStep({ step, index }: { step: Step; index: number }) {
       </div>
 
       {/* Visual Circle */}
-      <div className="flex-1 hidden md:flex justify-center">
-        <motion.div
-          className="w-64 h-64 rounded-full border border-white/10 flex items-center justify-center"
-          animate={{ rotate: 360 }}
-          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-        >
-          <span className="text-4xl font-bold text-white">{step.id}</span>
-        </motion.div>
+      <div className="hidden md:flex flex-col items-center justify-center w-32 relative">
+        <div className="w-6 h-6 rounded-full bg-[var(--color-neon-cyan)] flex items-center justify-center z-10">
+          <span className="text-black font-mono text-xs font-bold">{step.id}</span>
+        </div>
+        {index < 2 && (
+          <div className="absolute top-[calc(50%+12px)] h-[calc(100%+80px)] w-[1px] bg-[#1a5a5a] z-0" />
+        )}
       </div>
     </motion.div>
   );
@@ -125,13 +124,7 @@ export default function Story() {
       // scroll animations but exits much faster, so Projects follows naturally.
       className="relative py-32 min-h-[220vh]"
     >
-      {/* Timeline progress line */}
-      <div className="absolute left-1/2 top-0 bottom-0 w-px bg-white/10 -translate-x-1/2 hidden lg:block">
-        <motion.div
-          style={{ height }}
-          className="w-full bg-gradient-to-b from-cyan-400 via-purple-400 to-green-400"
-        />
-      </div>
+      {/* Timeline progress line removed in favor of direct lines */}
 
       <div className="max-w-6xl mx-auto px-8 md:px-12">
         {/* Section Header */}

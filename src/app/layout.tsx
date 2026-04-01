@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 export const metadata: Metadata = {
-  title: "Vishnu Shaji | Full-Stack & AI",
+  title: "Vishnu Shaji | Freelance Developer",
   description:
-    "B.Tech CS (AI) Student & Full-Stack Developer specializing in React Native and Next.js.",
+    "Full-stack developer based in Kerala — I turn business problems into fast, clean digital products.",
   verification: {
     google: "E2zCfpYrxeefXcPZzqPDxEK1RQGmLwUlt1gjsFcHniU",
   },
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className="antialiased bg-[var(--color-dark-bg)] text-white">
         <Navbar />
         {children}
+        <FloatingWhatsApp />
         <Footer />
       </body>
     </html>

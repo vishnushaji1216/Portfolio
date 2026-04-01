@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ExternalLink, Globe, Smartphone, Workflow } from "lucide-react";
 import { ReactNode } from "react";
+import Link from "next/link";
 
 type Project = {
   id: number;
@@ -11,9 +12,12 @@ type Project = {
   type: string;
   icon: ReactNode;
   description: string;
+  badge?: string;
+  outcome?: string;
   tech: string[];
   link: string;
   image: string;
+  actionText?: string;
 };
 
 const projects: Project[] = [
@@ -22,33 +26,42 @@ const projects: Project[] = [
     title: "Stella Maris School",
     type: "WEB",
     icon: <Globe size={14} className="mr-2" />,
+    badge: "WEB · LIVE",
     description:
       "A modern institutional website providing a seamless digital gateway for students and parents.",
+    outcome: "Now serves 200+ parent visits per month",
     tech: ["React", "Next.js", "Tailwind"],
     link: "https://www.stellamaris-school.org/",
     image: "/images/Stella_web.jpg",
+    actionText: "Visit Site",
   },
   {
     id: 2,
     title: "Stella Bridge App",
     type: "MOBILE",
     icon: <Smartphone size={14} className="mr-2" />,
+    badge: "MOBILE · DELIVERED TO CLIENT · 2026",
     description:
-      "Educational tracking application with 35+ screens for student monitoring.",
+      "Educational tracking platform for Stella Maris School. 35+ screens serving students, teachers, and admins. Includes fee management, quiz system, and multimedia assignment submission.",
+    outcome: "Replaced WhatsApp-based school operations entirely",
     tech: ["React Native", "Android"],
-    link: "#",
+    link: "/blog/stella-bridge",
     image: "/images/stella_bridge.jpg",
+    actionText: "Read Case Study",
   },
   {
     id: 3,
     title: "DocuCompare Automation",
     type: "AUTOMATION",
     icon: <Workflow size={14} className="mr-2" />,
+    badge: "AUTOMATION · DELIVERED TO CLIENT",
     description:
-      "Automation workflow engine to parse and compare complex documents.",
+      "Automation workflow engine that parses and compares complex documents using n8n pipelines and a FastAPI backend. Built for a client who needed to process large volumes of structured documents.",
+    outcome: "Delivered to client — read the full breakdown",
     tech: ["n8n", "FastAPI"],
-    link: "#",
+    link: "/blog/docucompare",
     image: "/images/n8n_workflow.jpg",
+    actionText: "Read Case Study",
   },
 ];
 
@@ -99,10 +112,16 @@ const ProjectShowcase = ({ project, index }: ProjectShowcaseProps) => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
           {/* Type Badge */}
-          <div className="absolute top-4 left-4 flex items-center text-xs font-mono text-white bg-black/60 backdrop-blur px-3 py-1 rounded">
-            {project.icon}
-            {project.type}
-          </div>
+          {project.badge ? (
+            <div className="absolute top-4 left-4 flex items-center text-xs font-mono text-[#25D366] font-bold bg-[#0d0d0d]/90 border border-[#25D366]/30 backdrop-blur px-3 py-1.5 rounded">
+              {project.badge}
+            </div>
+          ) : (
+            <div className="absolute top-4 left-4 flex items-center text-xs font-mono text-white bg-black/60 backdrop-blur px-3 py-1 rounded">
+              {project.icon}
+              {project.type}
+            </div>
+          )}
         </motion.div>
 
         {/* Content */}
@@ -115,7 +134,13 @@ const ProjectShowcase = ({ project, index }: ProjectShowcaseProps) => {
             {project.title}
           </h3>
 
-          <p className="text-white/60 leading-relaxed">{project.description}</p>
+          <p className="text-white/60 leading-relaxed text-[15px]">{project.description}</p>
+          
+          {project.outcome && (
+            <p className="text-gray-400 font-mono text-sm leading-relaxed border-l-2 border-[#1e1e1e] pl-4 italic">
+              "{project.outcome}"
+            </p>
+          )}
 
           {/* Tech stack */}
           <div
@@ -135,15 +160,25 @@ const ProjectShowcase = ({ project, index }: ProjectShowcaseProps) => {
 
           {/* Link */}
           <div className={`${isEven ? "" : "lg:justify-end"} flex pt-2`}>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm text-white/70 hover:text-cyan-400 transition"
-            >
-              <ExternalLink size={16} />
-              Visit Project
-            </a>
+            {project.link.startsWith("/") ? (
+              <Link
+                href={project.link}
+                className="flex items-center gap-2 text-sm text-white/70 hover:text-cyan-400 transition"
+              >
+                <ExternalLink size={16} />
+                {project.actionText || "Visit Project"}
+              </Link>
+            ) : (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-white/70 hover:text-cyan-400 transition"
+              >
+                <ExternalLink size={16} />
+                {project.actionText || "Visit Project"}
+              </a>
+            )}
           </div>
         </div>
       </motion.div>
@@ -167,7 +202,7 @@ export default function ProjectsSection() {
     </h2>
 
     <p className="text-white/60 mt-4 max-w-xl">
-      A showcase of web platforms, mobile apps, and automation systems
+      A showcase of web platforms, mobile apps, and full-stack systems
       built to solve real problems.
     </p>
   </div>

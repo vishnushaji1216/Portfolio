@@ -1,0 +1,338 @@
+.pageWrapper {
+  background-color: #000000;
+  color: #f3f4f6;
+  font-family: inherit;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 6rem 1.5rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.accentText {
+  color: #00e5ff;
+}
+
+.monoText {
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  font-size: 0.9em;
+  letter-spacing: -0.02em;
+}
+
+.backLink {
+  display: block;
+  margin-bottom: 48px;
+  color: #444444;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  font-size: 11px;
+}
+
+.backLink:hover {
+  color: #00e5ff;
+}
+
+.heroStats {
+  color: #9ca3af;
+  margin-bottom: 3rem;
+  letter-spacing: 0.05em;
+}
+
+.featurePrefix {
+  display: block;
+  color: #6b7280;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+  margin-bottom: 6rem;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.heroBadge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  background-color: rgba(0, 229, 255, 0.05);
+  color: #00e5ff;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+}
+
+.heroTagline {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  color: #a1a1aa;
+  max-width: 800px;
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #00e5ff;
+  color: #000000;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid #00e5ff;
+}
+
+.btnPrimary:hover {
+  background-color: transparent;
+  color: #00e5ff;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+}
+
+/* --- TWO COLUMN SECTION --- */
+.section {
+  margin-bottom: 6rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+}
+
+.twoColumn {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .twoColumn {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.textBlock h3 {
+  font-size: 1.25rem;
+  color: #00e5ff;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.textBlock p {
+  color: #d1d5db;
+  font-size: 1.1rem;
+}
+
+/* --- FEATURE GRID --- */
+.featureGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .featureGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .featureGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.featureCard {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.featureCard:hover {
+  border-color: rgba(0, 229, 255, 0.4);
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.featureCard h4 {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.featureCard p {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* --- TECH STACK --- */
+.stackLayer {
+  margin-bottom: 2rem;
+}
+
+.stackLayer h4 {
+  font-size: 1rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.pillList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.pill {
+  padding: 0.5rem 1rem;
+  background: rgba(0, 229, 255, 0.05);
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  color: #e5e7eb;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  transition: border-color 0.2s;
+}
+
+.pill:hover {
+  border-color: #00e5ff;
+}
+
+/* --- ARCHITECTURE --- */
+.architectureVis {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 3rem;
+  border-radius: 12px;
+}
+
+.tierBlock {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  border-left: 4px solid #00e5ff;
+}
+
+.tierArrow {
+  text-align: center;
+  color: #00e5ff;
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  opacity: 0.4;
+  margin: -8px 0;
+}
+
+.tierTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.tierDesc {
+  color: #9ca3af;
+  font-size: 0.95rem;
+}
+
+/* --- OUTCOME CARDS --- */
+.outcomeGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .outcomeGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.outcomeCard {
+  background: #0d0d0d;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(0, 229, 255, 0.35);
+  padding: 2.5rem 2rem;
+  border-radius: 8px;
+}
+
+.outcomeKeyword {
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  font-size: 10px;
+  color: #00e5ff;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.outcomeCard p {
+  color: #e5e7eb;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* --- NOTABLE CHALLENGE --- */
+.challengeBox {
+  background: rgba(0, 229, 255, 0.03);
+  border: 1px dashed rgba(0, 229, 255, 0.3);
+  padding: 2.5rem;
+  border-radius: 12px;
+}
+
+.challengeBox p {
+  color: #d1d5db;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* --- CTA SECTION --- */
+.ctaSection {
+  text-align: center;
+  padding: 6rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 6rem;
+}
+
+.ctaSection h2 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
