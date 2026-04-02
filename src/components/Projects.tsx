@@ -15,7 +15,7 @@ type Project = {
   badge?: string;
   outcome?: string;
   tech: string[];
-  link: string;
+  link?: string;
   image: string;
   actionText?: string;
 };
@@ -59,9 +59,7 @@ const projects: Project[] = [
       "Automation workflow engine that parses and compares complex documents using n8n pipelines and a FastAPI backend. Built for a client who needed to process large volumes of structured documents.",
     outcome: "Delivered to client — read the full breakdown",
     tech: ["n8n", "FastAPI"],
-    link: "/blog/docucompare",
     image: "/images/n8n_workflow.jpg",
-    actionText: "Read Case Study",
   },
 ];
 
@@ -159,27 +157,29 @@ const ProjectShowcase = ({ project, index }: ProjectShowcaseProps) => {
           </div>
 
           {/* Link */}
-          <div className={`${isEven ? "" : "lg:justify-end"} flex pt-2`}>
-            {project.link.startsWith("/") ? (
-              <Link
-                href={project.link}
-                className="flex items-center gap-2 text-sm text-white/70 hover:text-cyan-400 transition"
-              >
-                <ExternalLink size={16} />
-                {project.actionText || "Visit Project"}
-              </Link>
-            ) : (
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-white/70 hover:text-cyan-400 transition"
-              >
-                <ExternalLink size={16} />
-                {project.actionText || "Visit Project"}
-              </a>
-            )}
-          </div>
+          {project.link && (
+            <div className={`${isEven ? "" : "lg:justify-end"} flex pt-2`}>
+              {project.link.startsWith("/") ? (
+                <Link
+                  href={project.link}
+                  className="flex items-center gap-2 text-sm text-white/70 hover:text-cyan-400 transition"
+                >
+                  <ExternalLink size={16} />
+                  {project.actionText || "Visit Project"}
+                </Link>
+              ) : (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm text-white/70 hover:text-cyan-400 transition"
+                >
+                  <ExternalLink size={16} />
+                  {project.actionText || "Visit Project"}
+                </a>
+              )}
+            </div>
+          )}
         </div>
       </motion.div>
     </motion.div>

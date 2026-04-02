@@ -93,7 +93,7 @@ export default function Contact() {
               </div>
               <div>
                 <div className="text-gray-500 font-mono text-xs tracking-widest uppercase mb-1">WhatsApp</div>
-                <a href="https://wa.me/917907021234" target="_blank" rel="noopener noreferrer" className="text-white font-mono text-sm hover:text-[var(--color-neon-cyan)] transition-colors">+91 7907021234</a>
+                <a href="https://wa.me/917907021204" target="_blank" rel="noopener noreferrer" className="text-white font-mono text-sm hover:text-[var(--color-neon-cyan)] transition-colors">+91 7907021204</a>
               </div>
             </div>
 

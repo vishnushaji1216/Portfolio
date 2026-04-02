@@ -67,7 +67,7 @@ export default function Footer() {
             </Link>
 
             <Link
-              href="https://wa.me/917907021234"
+              href="https://wa.me/917907021204"
               target="_blank"
               className="hover:text-[var(--color-neon-cyan)] hover:-translate-y-1 transition-all duration-300"
             >

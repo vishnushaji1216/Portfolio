@@ -12,15 +12,6 @@ export default function Services() {
       popular: false,
     },
     {
-      title: "Android App",
-      description:
-        "A complete mobile application uploaded to the Play Store, built for performance and user retention.",
-      includes: "UX/UI Design · React Native · Backend & API · Play Store Deployment · 1 Month Support",
-      timeline: "4–6 weeks",
-      price: "₹40,000+",
-      popular: false,
-    },
-    {
       title: "Full Web App",
       description:
         "A complete web application with user accounts, dashboards, and backend logic — built to scale.",
@@ -28,6 +19,15 @@ export default function Services() {
       timeline: "3–6 weeks",
       price: "₹20,000+",
       popular: true,
+    },
+    {
+      title: "Android App",
+      description:
+        "A complete mobile application uploaded to the Play Store, built for performance and user retention.",
+      includes: "UX/UI Design · React Native · Backend & API · Play Store Deployment · 1 Month Support",
+      timeline: "4–6 weeks",
+      price: "₹40,000+",
+      popular: false,
     },
   ];
 
